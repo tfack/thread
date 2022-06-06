@@ -17,10 +17,8 @@ class myThread (threading.Thread):
       self.name = name
       self.job = target
     def run(self):
-       lock.acquire()
        rl = self.job
        result = rl.rsort()
-       lock.release()
 
 class WhatCanIMake():
     def __init__(self, pantrylist, recipelist, resultlist):
@@ -28,16 +26,12 @@ class WhatCanIMake():
         self.recipelist = recipelist
         self.resultlist = resultlist
     def rsort(self):
-        # open smoothie.csv, see if item is 'y', if so add to new instock list
-        # with open('smoothie.csv', newline='') as csvfile:
         with open(self.pantrylist, newline='') as csvfile:
             reader = csv.reader(csvfile, delimiter=',', quotechar='|')
             for row in reader:
                 if row[1] == 'y':
                     instock.append(row[0])
 
-        # open smoothierecipes, get first column as name, get second column as list, compare with instock list
-        # with open('smoothierecipes.csv', newline='') as csvfile:
         with open(self.recipelist, newline='') as csvfile:
             reader = csv.reader(csvfile, quotechar='"')
             for r in reader:
@@ -60,9 +54,6 @@ class WhatCanIMake():
                 output.append(line)
             output.sort(key=lambda row: (row[1], row[2]), reverse=False)
 
-        # create new list with recipe name, missing ingredients, and number of missing ingredients,
-        # save as smoothieonly.csv
-        # with open('smoothieonly.csv', 'w', newline='') as csvfile:
         with open(self.resultlist, 'w', newline='') as csvfile:
             write=csv.writer(csvfile)
             write.writerows(output)
@@ -97,15 +88,6 @@ for i in range(1, numthreads+1):
 end_time = datetime.now()
 time_diff = (end_time - start_time)
 print(f"elapsed time: {time_diff}")
-
-
-
-# thread1 = myThread(1, "Thread-1", rl)
-# threads.append(thread1)
-# thread1.start()
-
-# x = rl.rsort()
-# print(x)
 
 for t in threads:
        t.join()

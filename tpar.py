@@ -2,7 +2,6 @@ import csv
 import os
 import time
 from datetime import datetime
-from datetime import timedelta
 import threading
 import pandas as pd
 
@@ -11,20 +10,19 @@ lock = threading.Lock()
 instock = []
 output = []
 templist = []
+threadnm = {}
 
 class myThread (threading.Thread):
-    def __init__(self, threadID, name, target):
+    def __init__(self, threadID, name, target, args):
         super(myThread, self).__init__(target=target)
         self.threadID = threadID
         self.name = name
         self.job = target
+        self.nm = args
+        # print(f"{name} INIT")
     def run(self):
-        # instock = wc.instock_y()
-        # templist = wc.getfile()
-        # lock.acquire()
-        crosscheck(self)
-        # lock.release()
-        # wc.save_file(output)
+        # print(f"{self.name} RUN")
+        crosscheck(self, self.name)
 
 class WhatCanIMake():
     def __init__(self, pantrylist, recipelist, resultlist):
@@ -55,12 +53,14 @@ class WhatCanIMake():
             write=csv.writer(csvfile)
             write.writerows(output)
     
-def crosscheck(self):
-    # with open(self.recipelist, newline='') as csvfile:
-    #     reader = csv.reader(csvfile, quotechar='"')
-        # for r in reader:
+def crosscheck(self, name):
+    # print(f"{name} | compare in-stock pantry item list with recipe ingredient list")
+    # print(f"{name} | add to new list of recipe name + missing items + missing items count")
+    # print(f"{name} | then delete recipe row from temp list")
     for r in templist:
-        name = r[0]
+        lock.acquire()        
+        # print(f"{name} | templist item: {r[0]}")
+        rname = r[0]
         ingred_c = r[1]
         ingred = ingred_c.split(",")     
         missing = []
@@ -73,54 +73,54 @@ def crosscheck(self):
             else:
                 missing.append(ing)
                 count = count + 1
-        line.append(name)
+        line.append(rname)
         line.append(count)
         line.append(missing)
-        line.append(threadname)
+        line.append({name})
         output.append(line)
+        # print(f" | append : {line}")
+        # print(f" | remove: {r}") 
         templist.remove(r)
+        lock.release()
 
 def threadtest(num_threads):
     threads = []
 
     # Create new threads
-    print("----------------------------------")
+    # print("----------------------------------")
+    # print("WhatCanIMake object initialized with csv file locations")
     wc = WhatCanIMake('smoothie.csv', 'smoothierecipes.csv', 'smoothieonly.csv')
-    res = pd.read_csv(wc.pantrylist)
-    numitems = len(res)
+    # res = pd.read_csv(wc.pantrylist)
+    # numitems = len(res)
 
     numthreads = num_threads
-
-    # if numitems % numthreads == 0:
-    #     items_per_thread = numitems/numthreads
-    # else:
-    #     # for now ignore but add remainder later
-    #     items_per_thread = numitems/numthreads
             
     print(f"number of threads: {numthreads}")
     
+    # print("call instock() to get list of pantry items in stock")
     instock = wc.instock_y()
+    # print("call getfile() to convert recipe csv into temporary list")
     templist = wc.getfile()
     
     start_time = datetime.now()
+    # print(f"file overhead complete: threading timer starts NOW [{start_time}]")
             
     for i in range(1, numthreads+1):
-        global threadname
+        # print("...for each thread....")
         threadname = "Thread-" + str(i)
-        thread = myThread(i, threadname, crosscheck)
+        thread = myThread(i, threadname, target=crosscheck, args=(threadname,))
         thread.start()
         threads.append(thread)
 
     wc.finalsort(output)
     wc.save_file(output)
 
-    end_time = datetime.now()
-    time_diff = (end_time - start_time)
-    print(f"elapsed time: {time_diff}")
-
     for t in threads:
         t.join()
        
+    end_time = datetime.now()
+    time_diff = (end_time - start_time)
+    print(f"elapsed time: {time_diff}")
 
 if __name__ == "__main__":
     threadtest(1)
