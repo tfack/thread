@@ -123,13 +123,10 @@ def threadtest(num_threads):
        
 
 if __name__ == "__main__":
-    # threadtest(1)
+    threadtest(1)
     # threadtest(2)
-    threadtest(10)
+    # threadtest(10)
     
-
-
-
 
 
 

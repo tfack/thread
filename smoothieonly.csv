@@ -3,82 +3,40 @@
 % PEACH GREEN SMOOTHIE,0,[],Thread-1
 % STRAWBERRY BANANA KALE SMOOTHIE,0,[],Thread-1
 PALEO PEACH COCONUT SMOOTHIE,0,[],Thread-1
-% HUNGER CONTROL SMOOTHIE,0,[],Thread-2
-BLUEBERRY SPINACH,0,[],Thread-2
-KETO AVOCADO SMOOTHIE,0,[],Thread-2
-PEANUT BUTTER BLUEBERRY,0,[],Thread-2
-! KALE-GINGER DETOX SMOOTHIE,0,[],Thread-3
 CHOCOLATE RASPBERRY LAYERED SMOOTHIE,1,['almond butter'],Thread-1
-% ANTI-INFLAMMATORY BLUEBERRY SMOOTHIE,1,['almond butter'],Thread-4
-% STRAWBERRY-RASPBERRY ALMOND SMOOTHIE,1,['almonds'],Thread-2
-@ BEET PLUM GINGER SMOOTHIE,1,['beets'],Thread-2
-BREAKFAST SMOOTHIE,1,['blackberries frozen'],Thread-5
-% QUICK AND DELICIOUS SUPERFOOD BREAKFAST SMOOTHIE,1,['cacao nibs'],Thread-3
 ! MY GO-TO SMOOTHIE BOWL,1,['coconut shredded'],Thread-1
-! GINGERY MANGO BERRY SMOOTHIE,1,['coconut shredded'],Thread-4
 PALEO GREEN SMOOTHIE,1,['coconut water'],Thread-1
-SUPER GREEN not-SPIRULINA SMOOTHIE ,1,['cucumber'],Thread-5
 ! CREAMY CHOCOLATE HEMP SMOOTHIE,1,['dates'],Thread-1
-! HIDDEN GREENS CHOCOLATE PROTEIN SHAKE,1,['dates'],Thread-2
-% BANANA-DATE SMOOTHIE,1,['dates'],Thread-2
-@ DATE TAHINI AND CARDAMOM SMOOTHIE,1,['dates'],Thread-3
-! PLUM AND GINGER SMOOTHIE,1,['dates'],Thread-5
 GOJI APPLE MORNING SMOOTHIE,1,['goji berries'],Thread-1
 @ KIWI SMOOTHIE,1,['kiwi'],Thread-1
 BLENDED MANGO SALAD,1,['lettuce romaine'],Thread-1
 MATCHA KALE & PEACH SMOOTHIE,1,['matcha powder'],Thread-1
-FALL HARVEST SMOOTHIE,1,['orange'],Thread-3
 ! GREEN MACHINE SMOOTHIE,1,['orange juice'],Thread-1
-@ GINGER PLUM SMOOTHIE,1,['orange juice'],Thread-2
-@ STRAWBERRY BANANA GREEN SMOOTHIE,1,['orange juice'],Thread-3
 @ GINGER COLADA GREEN SMOOTHIE,1,['pineapple frozen'],Thread-1
 @ VEGAN BREAKFAST SMOOTHIE,1,['pineapple frozen'],Thread-1
 KALE PINEAPPLE AND ALMOND MILK SMOOTHIE,1,['pineapple frozen'],Thread-1
-@ PINEAPPLE BLUEBERRY SMOOTHIE,1,['pineapple frozen'],Thread-2
 ! EAT YOUR GREENS FRUIT SMOOTHIE,1,['pomegranate juice'],Thread-1
 ! HIDE YOUR KALE SMOOTHIE,1,['pomegranate juice'],Thread-1
 CREAMY FRUIT AND BERRY SMOOTHIE,1,['pomegranate juice'],Thread-1
-CHOCOLATE KALE SMOOTHIE,2,"['almond butter', 'blackberries']",Thread-3
-BETA PALEO SMOOTHIE,2,"['almond butter', 'orange juice']",Thread-3
 BEST WORST SMOOTHIE,2,"['broccoli', 'plantains']",Thread-1
 @ CARROT GINGER TURMERIC SMOOTHIE,2,"['carrots', 'pineapple frozen']",Thread-1
-BANANA DATE AND CASHEW SMOOTHIE,2,"['cashews', 'dates']",Thread-2
-CREAMY GOLDEN MILK SMOOTHIE,2,"['cloves ground', 'carrots']",Thread-4
-! CHOCOLATE BANANA COFFEE SMOOTHIE,2,"['coconut shredded', 'coffee ground']",Thread-3
-COCONUT KALE-ADA SMOOTHIE,2,"['coconut shredded', 'pineapple frozen']",Thread-2
-MODIFIED KALE-ADA ,2,"['coconut shredded', 'pineapple frozen']",Thread-3
-PALEO MOCHA LATTE,2,"['coffee ground', 'vanilla powder']",Thread-4
-% CREAMY PINEAPPLE CUCUMBER SMOOTHIE,2,"['cucumber', 'pineapple frozen']",Thread-6
 % CHOCOLATE HEMP SHAKE,2,"['dates', 'almond butter']",Thread-1
-! BERRY AND TAHINI SMOOTHIE,2,"['dates', 'blackberries frozen']",Thread-2
 CHOCOLATE CHERRY ICE CREAM,2,"['dates', 'cherries frozen']",Thread-1
-WHITE PEPPERMINT SMOOTHIE,2,"['mint', 'coconut butter']",Thread-3
 ! KIDS MANGO BLEND,2,"['nutritional yeast', 'coconut water']",Thread-1
 @ ORANGE MANGO CARROT,2,"['orange', 'carrots']",Thread-1
-! CREAMY PLANTAIN GREEN SMOOTHIE,2,"['orange juice', 'plantains']",Thread-2
-IT IS EASY BEING GREEN,2,"['peas snow', 'pineapple frozen']",Thread-7
-PUMPKIN COCONUT SMOOTHIE,2,"['pumpkin puree', 'pumpkin pie spice']",Thread-3
 % SUPER GREEN SMOOTHIE BOWL,2,"['sunflower seeds', 'coconut shredded']",Thread-1
 ! SPICY MANGO SMOOTHIE,2,"['sweet potatoes', 'orange']",Thread-1
 CREAMY ZUCCHINI BLUEBERRY SMOOTHIE,2,"['zucchini', 'maca powder']",Thread-1
 ! BERRIES BROCCOLI,3,"['blackberries frozen', 'broccoli frozen', 'orange juice']",Thread-1
 MY FAVORITE BREAKFAST SMOOTHIE,3,"['carrot juice', 'orange', 'pears']",Thread-1
 CARROT BEET BERRY BLEND,3,"['carrots', 'beets', 'mint']",Thread-1
-CHERRY CACAO BLEND,3,"['cherries frozen', 'cacao nibs', 'apple juice']",Thread-2
-! KIDS' PINEAPPLE BLEND,3,"['nutritional yeast', 'coconut water', 'pineapple frozen']",Thread-2
 GUAVA PAPAYA SMOOTHIE,3,"['papaya', 'guava', 'parsley fresh']",Thread-1
 % DEEP BLUE SEA BLEND,3,"['pineapple frozen', 'coconut frozen', 'coconut water']",Thread-1
 PUMPKIN PIE GREEN SMOOTHIE,3,"['pumpkin puree', 'coconut milk box', 'pumpkin pie spice']",Thread-1
-TRIPLE B BLEND,4,"['apple juice', 'pepitas', 'basil fresh', 'beets']",Thread-2
 SUPERFOOD CHOCOLATE ALMOND AVOCADO SMOOTHIE ,4,"['cacao nibs', 'almond butter', 'dates', 'maca powder']",Thread-1
-ORANGE BEET SMOOTHIE,4,"['chard swiss', 'beets', 'orange', 'goji berries']",Thread-2
-@ MONK BLEND,4,"['goji berries', 'orange juice', 'almonds', 'orange']",Thread-4
 BRAIN SMOOTHIE,4,"['orange juice', 'beets', 'broccoli', 'rosemary fresh']",Thread-1
 RAW FOOD GREEN KALE SMOOTHIE,4,"['orange juice', 'parsley fresh', 'cilantro', 'mint']",Thread-1
 ULTRA QUEEN K PERFORMANCE BLEND,4,"['pineapple frozen', 'maca powder', 'coconut frozen', 'dates']",Thread-1
 BABY FACE SMOOTHIE,4,"['sweet potatoes', 'pineapple', 'orange', 'camu camu']",Thread-1
 PEPPER PARSLEY ZEST,4,"['tomatoes grape', 'parsley fresh', 'salt pink himalayan sea', 'bell pepper yellow']",Thread-1
-RASPBERRY BASIL SMOOTHIE,4,"['tomatoes grape', 'pineapple', 'basil fresh', 'goji berries']",Thread-2
-DIVINE VIBRATION BLEND,5,"['coconut water', 'grapefruit', 'carrots', 'sage fresh', 'aloe']",Thread-2
 EPIC5 RECOVERY BLEND ,6,"['beets', 'acai frozen', 'maca powder', 'pumpkin seeds', 'goji berries', 'coconut water']",Thread-1
-GREEN EXTREME BLEND,6,"['olives kalamata', 'jalapeno', 'cilantro', 'basil fresh', 'pumpkin seeds', 'seaweed dried']",Thread-2
