@@ -65,16 +65,16 @@ threads = []
 # Create new threads
 print("----------------------------------")
 rl = WhatCanIMake('smoothie.csv', 'smoothierecipes.csv', 'smoothieonly.csv')
-res = pd.read_csv(rl.pantrylist)
-numitems = len(res)
+# res = pd.read_csv(rl.pantrylist)
+# numitems = len(res)
 
 numthreads = 1
 
-if numitems % numthreads == 0:
-    items_per_thread = numitems/numthreads
-else:
-    # for now ignore but add remainder later
-    items_per_thread = numitems/numthreads
+# if numitems % numthreads == 0:
+#     items_per_thread = numitems/numthreads
+# else:
+#     # for now ignore but add remainder later
+#     items_per_thread = numitems/numthreads
         
 print(f"number of threads: {numthreads}")
 start_time = datetime.now()
@@ -85,18 +85,10 @@ for i in range(1, numthreads+1):
     thread.start()
     threads.append(thread)
 
+for t in threads:
+       t.join()
+
 end_time = datetime.now()
 time_diff = (end_time - start_time)
 print(f"elapsed time: {time_diff}")
-
-for t in threads:
-       t.join()
-       
-       
-
-
-
-
-
-
 
